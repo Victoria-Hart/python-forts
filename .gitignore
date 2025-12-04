@@ -1,3 +1,5 @@
+secret/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -74,6 +76,10 @@ docs/_build/
 # PyBuilder
 .pybuilder/
 target/
+
+# claude
+CLAUDE.md
+.claude/
 
 # Jupyter Notebook
 .ipynb_checkpoints

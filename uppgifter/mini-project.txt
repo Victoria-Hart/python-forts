@@ -1,0 +1,151 @@
+ÖPPET MINI-PROJEKT – Bygg ditt eget CLI-verktyg
+Mål
+Du ska bygga ett valfritt CLI-program som körs i terminalen och består av flera moduler.
+ Du får välja helt själv vad programmet gör – kreativitet uppmuntras!
+
+Ditt projekt ska uppfylla följande:
+✔ Ett huvudprogram (main.py)
+✔ Minst 3 separata moduler (t.ex. tools_math.py, tools_text.py, utils.py)
+✔ Importer mellan filer
+✔ Fungerande felhantering vid felaktiga val
+
+Förslag på projektidéer
+Här är inspiration – men du får göra vad du vill:
+
+1. Textanalysator
+räkna ord
+
+
+hitta längsta ordet
+
+
+visa de vanligaste orden
+
+
+ta bort stoppord
+
+
+
+2. Lösenordsgenerator
+olika svårighetsgrader
+
+
+specialtecken
+
+
+slumpade fraser
+
+
+spara lösenord i fil (VG)
+
+
+
+3. Mini-spel
+gissa numret
+
+
+sten-sax-påse
+
+
+textäventyr
+
+
+quiz med poängräkning
+
+
+
+4. Personlig assistent
+“kom ihåg”-lista
+
+
+daily quotes (via API)
+
+
+timer & alarm
+
+
+väderrappport (API)
+
+
+
+5. Budget- eller inköpslista
+lägg till/ta bort poster
+
+
+summera kostnader
+
+
+spara i json
+
+
+visa totalt / kategorier
+
+
+
+6. Filverktyg
+sök filer i en mapp
+
+
+räkna rader/tecken
+
+
+skapa backup-kopior
+
+
+konvertera text → json
+
+
+
+7. Habit tracker
+logga träningspass
+
+
+visa veckosammanställning
+
+
+mål/progress
+
+
+diagram i ascii
+
+
+
+8. Ordbok / lexikon
+lägg till nya ord
+
+
+sök ord
+
+
+kategorier
+
+
+spara i fil
+
+
+
+9. API-verktyg
+hämta kryptopriser
+
+
+hämta citat
+
+
+hämta väderdata
+
+
+
+10. Programmeringshjälpverktyg
+räkna kodrader
+
+
+formattera text
+
+
+generera filer
+
+
+skapa projektstruktur
+
+
+
