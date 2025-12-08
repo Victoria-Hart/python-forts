@@ -153,12 +153,18 @@ def copy_file(source, destination, create_backup=True):
         import datetime
         timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
         backup_path = destination.parent / f"{destination.stem}_backup_{timestamp}{destination.suffix}"
-        shutil.copy2(destination, backup_path)
-        log(f"Created backup: {backup_path}")
+        try:
+            shutil.copy2(destination, backup_path)
+            log(f"Created backup: {backup_path}")
+        except (OSError, PermissionError) as e:
+            raise IOError(f"Failed to create backup: {e}")
 
     # Copy file with metadata (timestamps, permissions)
-    shutil.copy2(source, destination)
-    log(f"Copied {source.name} to {destination}")
+    try:
+        shutil.copy2(source, destination)
+        log(f"Copied {source.name} to {destination}")
+    except (OSError, PermissionError) as e:
+        raise IOError(f"Failed to copy file: {e}")
 
     return destination
 
@@ -192,7 +198,10 @@ def create_backup(file_path, backup_dir=None):
     else:
         backup_dir = Path(backup_dir)
 
-    backup_dir.mkdir(exist_ok=True)
+    try:
+        backup_dir.mkdir(exist_ok=True)
+    except (OSError, PermissionError) as e:
+        raise IOError(f"Failed to create backup directory: {e}")
 
     # Create backup filename with timestamp
     timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
@@ -200,8 +209,11 @@ def create_backup(file_path, backup_dir=None):
     backup_path = backup_dir / backup_name
 
     # Copy file
-    shutil.copy2(file_path, backup_path)
-    log(f"Backup created: {backup_path}")
+    try:
+        shutil.copy2(file_path, backup_path)
+        log(f"Backup created: {backup_path}")
+    except (OSError, PermissionError) as e:
+        raise IOError(f"Failed to create backup: {e}")
 
     return backup_path
 
